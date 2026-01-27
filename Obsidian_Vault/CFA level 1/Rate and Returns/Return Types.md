@@ -11,3 +11,4 @@ This makes more sense when it's just about borrowing money.
 $$
 (\text{real return} + 1) = \frac{(1+ \text{real risk free rate}) +(1+\text{risk premium})}{(1+\text{inflation premium})}
 $$
+- **Nominal Return:** Real return but no inflation
