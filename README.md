@@ -1,78 +1,76 @@
-# CTFSaleh
+# saleh-codes
 
-This repository is a personal working archive that brings together several of my interests:
-competitive programming, CTFs, coursework, machine learning experiments, and finance notes
-(particularly CFA Level I preparation). It is not a single cohesive project, but rather a
-collection of solutions, templates, experiments, and notes that I revisit and extend over time.
+A personal archive of competitive programming, CTF challenges, coursework, and finance notes.
+Not a polished project--more like a well-worn notebook that I keep coming back to.
 
-## Repository Structure
+---
 
-At a high level, the repository contains the following folders:
+## What's in here
 
-- **codeforces/**  
-  Solutions to Codeforces problems, written primarily for contest practice and post-contest
-  cleanup. Expect fast I/O patterns, standard CP tricks, and minimal commentary.
+### codeforces/
+Codeforces contest submissions. Some clean, some written in the last 30 seconds of a round.
+Covers Div. 2/3 rounds and a few global rounds. Fast I/O, hacky tricks, and the occasional
+"why did I think this would work" comment left in by accident.
 
-- **cp3/**  
-  Competitive programming practice inspired by the *CS 41100* at Purdue,
-  including drills, problem sets, and personal notes on problems im working through for the course.
+### cp2/ & cp3/
+Coursework at Purdue, specifically the competitive programming courses. `cp2` has the
+earlier weeks of CS 31100 plus NAQ competition material. `cp3` goes deeper: topics 0–7 covering greedy,
+DP, graph theory, min-cost max-flow, and more. A lot of the harder problems in here genuinely
+took me a while.
 
-- **leetcode/**  
-  LeetCode solutions and algorithmic experiments, oftentimes overlapping with CP topics.
+### Data Structures/
+Reusable templates I keep pulling out: sparse table, string hashing, min-cost max-flow,
+fast factorials. If something shows up in more than one contest, it earns a spot here.
 
-- **CTFs/**  
-  Capture-the-Flag related material: scripts, exploits, challenge solutions, and notes.
-  
-- **kaggle/Titanic/**  
-  Machine learning sandboxing using the classic Titanic dataset. Rough first approachs.
+### leetcode/
+LeetCode problems across easy/medium/hard, plus weekly contest submissions. Tends to overlap
+with CP topics--if I'm drilling a concept, it shows up in both places.
 
-- **Obsidian_Vault/**  
-  Personal notes maintained in Obsidian. This includes finance and economics material
-  (notably CFA Level I prep), along with general technical notes.
+### CTFs/
+CTF challenge solutions and notes. Covers binary exploitation (format strings, heap),
+crypto, and some misc.
 
-- **scratch/**  
-  Miscellaneous experiments, partial solutions, and quick tests that do not yet have a
-  permanent home.
+### kaggle/Titanic/
+The classic Titanic ML problem. A rough first attempt with pandas and sklearn. Nothing
+sophisticated, just getting a feel for the workflow.
 
-## Languages and Tools
+### CFA Notes Vault/
+Obsidian notes from my CFA Level I prep. Time Value of Money, Rates & Returns,
+Equity Securities, and more. Also has some older university exam notes buried in `OLD/`
+that I haven't had the heart to delete.
 
-- **Python** (primary)
-- **C++ / C** (competitive programming and for when I'm in the mood)
-- Occasional data science and scripting utilities
+### scratch/
+The junk drawer. Quick experiments, half-finished ideas, and one-off scripts that
+haven't found a home yet. Useful to have, embarrassing to show.
 
-## Usage
+---
 
-This repository is not intended to be built or run as a single project.
+## Languages
 
-### Competitive Programming
-Most solutions are standalone files:
+**Python** for almost everything. **C++** when Python is too slow or I'm feeling ambitious.
+Occasional **C** when a LeetCode problem is easy and I want to suffer slightly.
+
+---
+
+## Running things
+
+Solutions are standalone--no build system, no dependencies (usually).
 
 ```bash
 # Python
 python3 solution.py < input.txt
 
-# C++
-g++ -std=c++17 -O2 solution.cpp -o solution
+# C++ 
+g++ -std=c++17 -O3 solution.cpp -o solution
 ./solution < input.txt
 ```
 
-### Notes (Obsidian)
+For the Obsidian notes, open `CFA Notes Vault/` as a vault in [Obsidian](https://obsidian.md).
 
-To properly view the notes:
-1. Install **Obsidian**
-2. Open `Obsidian_Vault/` as a vault
-
-## Philosophy
-
-- **Practical over polished** — code and notes are written primarily for learning, iteration,
-  and future reuse rather than presentation.
-- **Template-driven** — common competitive programming patterns (fast I/O, bitmask DP,
-  greedy scaffolding, graph routines) appear repeatedly.
-- **Iterative and exploratory** — many files reflect intermediate thinking, where my head was at the time, rather than
-  finalized solutions.
+---
 
 ## Disclaimer
 
-Some code was written under contest time constraints or as rapid experimentation.
-Expect minimal comments, occasional rough edges, and problem-specific assumptions.
-Review and adapt before reuse.
+A lot of this was written fast--under contest pressure, late at night, or as a quick
+experiment I meant to clean up later. Comments are sparse, variable names are sometimes
+just `x`, and some solutions are wrong in interesting ways. Use at your own risk.
