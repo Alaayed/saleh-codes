@@ -1,2 +1,1 @@
-str = 'uuuuuuuuuuuls'
-print(str[:-1])
+print(f's {ord("s")} p {ord("p")} r {ord("r")}')
