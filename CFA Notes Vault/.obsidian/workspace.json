@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "d877de65b4396386",
+    "type": "split",
+    "children": [
+      {
+        "id": "75e96ca6248bd48c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0dd9ad740f6e8332",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CFA level 1/Time Value of Money/Equity Securities.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Equity Securities"
+            }
+          },
+          {
+            "id": "b80cb76ca3e1c4b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CFA level 1/Tests/Time Value of Money Test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Time Value of Money Test"
+            }
+          },
+          {
+            "id": "2f48a1f506ea0d3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CFA level 1/Tests/Time Value of Money Test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Time Value of Money Test"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3c99600e238b3b8d",
+    "type": "split",
+    "children": [
+      {
+        "id": "1bc05ab132df487b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd293cb7186e7cd1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1aedb093eabe59db",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "73c46703c0ed8d25",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7e1f91cad50d3c75",
+    "type": "split",
+    "children": [
+      {
+        "id": "67d603ec65aa0a32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f3ff4c1cb384418",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 1- Time Value of Money (TVM)"
+            }
+          },
+          {
+            "id": "4c9e917a8f38a99a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 1- Time Value of Money (TVM)"
+            }
+          },
+          {
+            "id": "7f3ec32e73d0a5f8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c8d842ab3d81eca7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 1- Time Value of Money (TVM)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "2f48a1f506ea0d3d",
+  "lastOpenFiles": [
+    "CFA level 1/Time Value of Money/Equity Securities.md",
+    "CFA level 1/Time Value of Money/Forward Currency Exchange Rates.md",
+    "CFA level 1/Time Value of Money/Forward Interest Rates.md",
+    "CFA level 1/Tests/Time Value of Money Test.md",
+    "CFA level 1/Time Value of Money/Bonds.md",
+    "CFA level 1/Time Value of Money/Cash Flow Additivity.md",
+    "CFA level 1/Time Value of Money/Options Pricing Model.md",
+    "CFA level 1/Tests/Rate and Returns Test.md",
+    "CFA level 1/CFA level 1 Topics.md",
+    "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
+    "Images/Pasted image 20260203131053.png",
+    "Images/Pasted image 20260203123758.png",
+    "CFA level 1/Tests/Untitled"
+  ]
+}
