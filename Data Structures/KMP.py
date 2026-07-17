@@ -10,8 +10,18 @@ def build_fail(p):
 		f[i] = j
 	return f
 
-
-
+# def build_fail(pattern):
+#     m = len(pattern)
+#     fail = [0] * m
+#     prefix_len = 0
+#     for i in range(1, m):
+#         while prefix_len > 0 and pattern[i] != pattern[prefix_len]:
+#             prefix_len = fail[prefix_len - 1]
+#         if pattern[i] == pattern[prefix_len]:
+#             prefix_len += 1
+#         fail[i] = prefix_len
+#     return fail
+#
 # Returns all start indices (0-indexed) where pat occurs in text.
 def kmp_search(text, pat):
 	if not pat:
