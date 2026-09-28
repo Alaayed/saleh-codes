@@ -3,3 +3,10 @@
 CFA Notes Vault/.obsidian
 .vscode/
 *.exe
+# private — kept local only
+*.pdf
+*.msi
+target/
+Brain/Work/
+Brain/TODO.md
+Brain/Archive/Weekly Notes/

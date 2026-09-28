@@ -1,0 +1,54 @@
+# clangd user configuration
+# Deploy to: %LOCALAPPDATA%\clangd\config.yaml
+# Toolchain: MSYS2 mingw64 -- GCC 15.2.0 + clangd 21.1.8
+#
+# Applies to every project. A project-local `.clangd` file is merged on top of
+# this one and wins, so override the standard there if a project needs it.
+# These flags are appended after any compile_commands.json entry, so `-std`
+# here overrides a project's own `-std` unless the project ships a `.clangd`.
+
+If:
+  PathMatch: [.*\.cpp, .*\.cxx, .*\.cc, .*\.hpp, .*\.hxx, .*\.hh, .*\.ipp, .*\.tpp, .*\.inl]
+CompileFlags:
+  Add:
+    - -std=c++23
+    # GCC turns on sized deallocation by default; Clang does not. libstdc++'s
+    # <generator> is gated behind __cpp_sized_deallocation, so without this
+    # clangd reports "no template named 'generator' in namespace 'std'" even
+    # though g++ compiles the same file fine.
+    - -fsized-deallocation
+    - -Wall
+
+---
+If:
+  PathMatch: [.*\.c, .*\.h]
+CompileFlags:
+  Add:
+    - -std=c23
+    - -Wall
+
+---
+Diagnostics:
+  # <bits/stdc++.h> is an umbrella header; strict unused-include checking would
+  # flag it on every file.
+  UnusedIncludes: None
+  ClangTidy:
+    Add:
+      - bugprone-*
+      - performance-*
+      - modernize-*
+    Remove:
+      - modernize-use-trailing-return-type
+      - bugprone-easily-swappable-parameters
+      - modernize-avoid-c-arrays
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+
+Hover:
+  ShowAKA: true
+
+Completion:
+  AllScopes: true

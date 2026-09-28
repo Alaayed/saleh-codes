@@ -1,7 +1,0 @@
-- [ ] Apply to internships in America
-- [ ] Buy Gold for Aunt
-- [ ] Finish cp problems
-- [ ] Finsh prelab
-- [ ] Get ghutra for wedding
-- [ ] Get Envelope for wedding 
-- [ ] 

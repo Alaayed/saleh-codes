@@ -1,4 +1,3 @@
-from typing import *
 class FenwickMax:
     def __init__ (self, size):
         self.tree = [0] * size
@@ -13,7 +12,7 @@ class FenwickMax:
             self.tree[index] = max(self.tree[index], value)
             index +=  (index & -index)
 class Solution:
-    def maxTwoEvents(self, events: List[List[int]]) -> int:
+    def maxTwoEvents(self, events: list[list[int]]) -> int:
         maxsum = 0
         endtree = FenwickMax(size = len(events))
         starttree = FenwickMax(size = len(events))
