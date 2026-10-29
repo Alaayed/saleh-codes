@@ -24,6 +24,9 @@ void solve() {
 				bitmask[stack.back()] = true;
 				stack.pop_back();
 				running_counter += 1;
+			} else {
+				bitmask[i] = true;
+				running_counter += 1;
 			}
 		} else {
 			bitmask[i] = true;
