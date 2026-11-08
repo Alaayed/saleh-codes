@@ -1,0 +1,152 @@
+%% moderncv banking template (Xavier Danaux), customised. Compile with XeLaTeX.
+%% Master CV: everything. Not meant to fit one page.
+\documentclass[11pt,a4paper,roman]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+
+\usepackage[utf8]{inputenc}
+% fontawesome6 is loaded by moderncv itself; loading the old `fontawesome' clashes with it.
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage[top=0.8in, bottom=0.8in, left=0.9in, right=0.9in]{geometry}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{linkblue}{RGB}{26, 115, 232}
+\hypersetup{colorlinks=true, urlcolor=linkblue}
+\name{Saleh}{Alaayed}
+
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} {\bfseries #4} \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}} {\bfseries #5} \end{tabular} \\
+  \begin{tabular}{@{}l} {\itshape #3} \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}} {\itshape #2} \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+  \begin{tabular}{@{}l} {\bfseries #2} \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}} {\itshape #3} \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+\begin{document}
+\makecvtitle
+\vspace*{-10mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ \faEnvelope[regular]\enspace saleh.alaayed@kaust.edu.sa & \faGithub\enspace \href{https://github.com/Alaayed/}{Alaayed} & \faMobile\enspace +966 59-266-6761 & \faLinkedin\enspace\href{https://www.linkedin.com/in/salaayed/}{salaayed}
+\end{tabular}
+\end{center}
+
+\section{SUMMARY}
+Software engineer at Darb, a Saudi spend-management fintech, where I led the redesign of the platform's user model and built its approval workflow engine. MS student in Computer Science at KAUST and Purdue CS graduate (top-20 US program) with a specialization in AI. Experienced across full-stack engineering, Go and TypeScript backends, and applied ML research.
+
+\section{EDUCATION}
+{\customcventry{Aug 2026 -- Present}{MS in Computer Science}{King Abdullah University of Science and Technology (KAUST)}{Thuwal, Saudi Arabia}{}{}}
+{\customcventry{May 2026}{BS in Computer Science, Specialization in AI \quad GPA: 3.65/4.0}{Purdue University}{West Lafayette, IN}{}{}}
+
+\section{EXPERIENCE}
+{\customcventry{Jun 2026 -- Present}{Software Engineer}{Darb (Darbpay) — corporate cards \& spend management}{Riyadh, Saudi Arabia}{}{}}
+{\small\begin{itemize}
+\setlength\itemsep{0.15em}
+\item Shipped 100+ tickets and led 4 projects end to end across the web portal, admin portal and native mobile app. Stack: Next.js, TypeScript, Prisma, PostgreSQL, GCP.
+\item \textbf{User Architecture Redesign} (project lead, Aug -- Oct 2026). Darb stored people in five overlapping tables, each with its own rules. I led the move to a single membership model where each person has one record and a set of roles.
+  \begin{itemize}
+  \item Migrated live production data with zero downtime: the new tables were filled from the old ones, kept in sync on every write, and compared nightly, all behind feature flags that could be switched off at any time.
+  \item Ran the migration in staging and production, fixed every mismatch found, and repaired 74 broken cardholder links across 2,209 production cardholders before switching reads to the new model.
+  \item Set up spec-driven development for the team (written specs, an architecture decision record, a runbook) and used parallel AI agents to inventory the codebase and independently verify the migration.
+  \end{itemize}
+\item \textbf{Approval Workflow Engine} (project lead, Oct 2026 -- present). Built the engine that lets admins define who approves card and limit-increase requests: rules by amount, multi-step chains (manager, manager's manager, admins, owner, named people), ``any'' or ``all'' approvals per step, automatic fallbacks, and no self-approval. Each approver sees a request only on their turn.
+\item \textbf{Bank Reports} (project lead, in progress). Specified the formal documents clients expect from a licensed institution, such as account statements and balance certificates, generated from the ledger as PDFs. Tickets written and ready for development.
+\item \textbf{Company section and Teams} (Aug 2026). Built the new Company page and the team create/edit flows that replaced the old Team page, and moved Groups and Alerts under Fleet Management.
+\item \textbf{Admin portal for operations} (Jun -- Aug 2026). Built the tools the ops team uses daily: review queues for pending and action-required clients, automatic routing of bank blacklist rejections, a lookup that finds any user from any identifier, and search across transactions and clients.
+\item \textbf{Transactions page.} Moved search to the server so it covers full history, fixed the filters, and added employee, vehicle, category and card-type columns and filters.
+\item \textbf{Security and data fixes.} Stopped group managers from seeing full card numbers. Fixed deleted employees keeping active logins, roles resetting when editing a manager, and several card-assignment bugs.
+\item \textbf{Quality fixes (40+).} Among them: one toast system instead of two, the correct company name on IBAN certificates, wallet transfers in the Excel export, foreign-currency amounts in notification emails, consistent transaction IDs across emails, PDFs and portals, dark-mode contrast, and bottom sheets replacing dropdowns in the mobile app.
+\end{itemize}
+}
+
+\section{PROJECTS}
+
+{\customcvproject{IMU-Based HAR (KAUST Information Lab | Intern)}{Jun 2025 – Aug 2025}
+        {\begin{itemize}
+        \setlength\itemsep{0.2em}
+        \item Contributed to research aiming to use prayer motion patterns as indicators of early motor decline
+        \item Built an IMU-based model classifying prayer transitions with ~90\% accuracy across 100 runs.
+        \item Processed quaternion data for world-frame rotation, denoising, and L2-norm peak detection.
+        \item Applied data augmentation (SMP, ATD) to improve temporal model generalization.
+        \end{itemize}
+        }
+}
+{\customcvproject{Sports Fantasy Website}{Aug 2024 - Dec 2024}
+{
+    \begin{itemize}
+    \setlength\itemsep{0.2em}
+    \item Collaborated with a six-member team over 3 sprints to deliver a full-stack fantasy sports platform using a Go backend, Next.js frontend and MongoDB.
+    \item Implemented backend API endpoints in Go enabling dynamic updates to database for team state changes, trading and user profile changes.
+    \item Enabled real time drafting by leveraging Redis and Go web sockets.
+    \item Streamlined team collaboration by documenting user stories and sprint plans, enhancing project organization and delivery efficiency.
+    \end{itemize}
+}
+}
+{\customcvproject{Shell Interpreter}{Jan 2024 - May 2024}
+{   \begin{itemize}
+    {
+    \setlength\itemsep{0.2em}
+    \item Developed shell interpreter with bash/csh features, command execution, parsing, and signal handling using C++ and Lex/Yacc.
+    \item Enhanced IO and process management with file redirection and pipelines.
+    \item Expanded functionality with environment variables, wildcards, built-ins, and subshells.
+    \item Improved usability with command history, editable mode, and path completion.
+    }
+    \end{itemize}
+}
+}
+{\customcvproject{\href{https://github.com/Alaayed/baloot_engine}{Baloot Card Game Engine}}{Jan 2025 – Present}
+{   \begin{itemize}
+    {
+    \setlength\itemsep{0.2em}
+    \item Engineered a complete Baloot card game engine in Rust, implementing game state management, trick representation, and legal move validation across Sun and Hokom game modes.
+    \item Designed a rule-compliant move generation system enforcing suit-following, trump logic, and scoring across all game variants, verified by 40+ unit tests.
+    \item Implemented a parallelized Alpha-Beta pruning AI opponent using Rayon, searching 16 moves ahead and completing a full game traversal in 5.5 seconds.
+    }
+    \end{itemize}
+}
+}
+
+\section{Relevant Coursework \& Languages}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Software Engineering, Information Systems (SQL), Data Mining \& Machine Learning, Operating Systems, Analysis of Algorithms
+          \item Proficient with TypeScript, Python, Go, C, C++, Rust, Java, x86-64 Assembly
+          \item Fluent in English, Arabic.
+		\end{itemize}}%
+\end{minipage}%
+
+\section{AWARDS}
+
+\customcventry{2021 -- 2026}{KAUST Gifted Student Program Recipient}{King Abdullah University of Science and Technology}{Thuwal, Saudi Arabia}{}
+{\begin{itemize}
+  \item Competitively selected based on academic and extracurricular excellence to receive KAUST's national undergraduate scholarship.
+\end{itemize}
+}
+
+\end{document}
